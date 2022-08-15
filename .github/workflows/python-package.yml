@@ -24,12 +24,17 @@ jobs:
       - name: Install pipenv
         run: |
           python3 -m pip install --user pipenv
-      - name: Install dependencies
-        run: pipenv install requests
-      -name: Create venv
-        - run: python3 -m venv env
+      - name: Install venv
+        run: | 
+          sudo apt-get install python3.6-venv      
+      - name: Create venv
+        run: |
+          python3 -m venv env
       - name: Activate venv
         run: |
           source venv/bin/activate
+      - name: Install dependencies
+        run: |
+          pipenv install requests
       - name: Run pytest
         run: pytest
