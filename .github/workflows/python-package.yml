@@ -24,9 +24,6 @@ jobs:
       - name: Install pipenv
         run: |
           python3 -m pip install --user pipenv
-      - name: Install venv
-        run: | 
-          sudo apt-get install python3.6-venv      
       - name: Create venv
         run: |
           python3 -m venv env
