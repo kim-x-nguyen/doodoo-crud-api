@@ -26,6 +26,8 @@ jobs:
           python3 -m pip install --user pipenv
       - name: Install dependencies
         run: pipenv install requests
-      - name: Unit Testing with pytest
+      - name: Activate venv
         run: |
-          pytest
+          source venv/bin/activate
+      - name: Run pytest
+        run: pytest
