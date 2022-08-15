@@ -33,5 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           pipenv install requests
+      - name: Install pytest
+        run: pipenv install pytest
       - name: Run pytest
         run: pytest
