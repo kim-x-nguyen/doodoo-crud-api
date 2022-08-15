@@ -31,6 +31,6 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Install pytest
-        run: pipenv install pytest
+        run: pip install pytest
       - name: Run pytest
-        run: pipenv run pytest
+        run: pytest
